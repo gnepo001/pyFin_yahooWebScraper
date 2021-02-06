@@ -3,9 +3,9 @@ import time
 import pandas as pd
 
 t = time.time()
-stocks = ["AAPL","AMZN","AMD","TSLA",'SPY']
+stocks = ["AAPL","AMZN","MSFT","FB","T","LULU","AMD","TSLA",'SPY']
 
-x = pd.DataFrame.from_dict(yahooWebScraper.getCompanyInfo(stocks))
+x = pd.DataFrame.from_dict(yahooWebScraper.getCompanyInfo(stocks),orient='index')
 
 print(x)
 
